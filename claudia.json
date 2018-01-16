@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "grobot-executor",
+    "name": "grobot",
+    "region": "eu-west-2"
+  },
+  "api": {
+    "id": "vxn215kvph",
+    "module": "index"
+  }
+}
