@@ -1,0 +1,20 @@
+{
+  "name": "grobot",
+  "author": "Daron Jones",
+  "description": "Claudia Chatbot for Grow.am",
+  "license": "ISC",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "lambda.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name hello-world --region eu-west-2 --handler lambda.handler",
+    "test": "claudia test-lambda",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia-api-builder": "^3.0.1"
+  },
+  "dependencies": {}
+}
