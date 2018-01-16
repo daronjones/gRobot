@@ -6,15 +6,14 @@
   "version": "0.0.0",
   "private": true,
   "files": [
-    "lambda.js"
+    "index.js"
   ],
   "scripts": {
-    "start": "claudia create --name hello-world --region eu-west-2 --handler lambda.handler",
+    "start": "claudia create --name grobot --region eu-west-2 --api-module index --profile claudia",
     "test": "claudia test-lambda",
     "deploy": "claudia update"
   },
-  "devDependencies": {
+  "dependencies": {
     "claudia-api-builder": "^3.0.1"
-  },
-  "dependencies": {}
+  }
 }
