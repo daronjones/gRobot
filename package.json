@@ -11,14 +11,15 @@
   "scripts": {
     "start": "claudia create --name grobot --region eu-west-2 --api-module index",
     "test": "claudia test-lambda",
-    "deploy": "claudia update"
+    "update": "claudia update"
   },
   "dependencies": {
+    "aws-sdk": "^2.183.0",
     "claudia-api-builder": "^3.0.1",
-    "eslint": "^4.15.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1"
+    "claudia-bot-builder": "^3.0.0",
+    "watson-developer-cloud": "^3.0.4"
+  },
+  "devDependencies": {
+    "claudia": "^3.2.0"
   }
 }
