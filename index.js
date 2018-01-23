@@ -10,15 +10,15 @@ var apiBuilder = require('claudia-api-builder'),
 
 // Bot stuffs
 var DEFAULT_ERR_REPLY = 'Sorry, I\'m taking a break right now. Please come back later.',
-  WORKSPACE_ID = 'your-workspace-id',
+  WORKSPACE_ID = '981d924c-59b6-40e9-ab08-f0f4fdb124a6',
   conversation = watson.conversation({
-    username: 'your-username',
+    username: 'd6d634fb-c71b-4ef9-8cee-7a4a09f085b4',
     password: 'your-password',
     version_date: '2016-07-01',
     version: 'v1'
   });
 
-module.exports = botBuilder(bBuilder);
+module.exports = botBuilder(watBotBuilder);
 
 /*
 // just return the result value for synchronous processing
@@ -42,7 +42,7 @@ function bBuilder(req) {
   }
 }
 
-function watBotBuilder(req) {
+function watBotBuilder(request) {
   console.log('Request:', request)
 
   var payload = {
@@ -54,7 +54,6 @@ function watBotBuilder(req) {
   };
 
   conversation.message (payload, function (err, data) {
-
       if (err) {
         console.error('Error:', JSON.stringify(error));
         return DEFAULT_ERR_REPLY;
